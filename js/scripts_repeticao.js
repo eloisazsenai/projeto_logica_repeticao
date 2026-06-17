@@ -39,4 +39,40 @@ btnFrase.addEventListener('click', (evt)=>{
     }
 })
 
+//COLEÇÃO DE DADOS - ARRAY
+const presentes = ['Bicicleta', 'celular', 'camisa do Mengão', 'Doleira', 'Tenis Adidas']
+
+const divArray = document.querySelector('#div-array')
+
+for(i =0; i < 5;i++){
+    divArray.innerHTML +=  `${presentes[i]} <br>`
+}
+
 //FOR IN
+const divForIn = document.querySelector('#div-forin')
+
+for(let posicao in presentes){
+    divForIn.innerHTML += `${presentes[posicao]} <br>`
+}
+
+//FOR OF
+const divForOf = document.querySelector('#div-forof')
+
+for(let elemento of presentes){
+    divForOf.innerHTML += `${elemento} <br>`
+}
+
+//FOREACH
+const divForeach = document.querySelector('#div-foreach')
+
+presentes.forEach((elemento, i) => {
+    divForeach.innerHTML += `${i} - ${elemento} <br>`
+})
+
+const pessoas = [
+    {nome: 'Maria Flor', idade: 25, renda: 8500},
+    {nome: 'Joerdson Souza', idade: 75, renda:5000},
+    {nome:'Taoca', idade:28, renda:500},
+    {nome:'Chicó', idade:36, renda:100},
+    {nome: 'João Flor', idade:32, renda:80}
+]
