@@ -69,6 +69,7 @@ presentes.forEach((elemento, i) => {
     divForeach.innerHTML += `${i} - ${elemento} <br>`
 })
 
+//COLEÇÃO DE OBJETOS LITERAIS - ARRAY
 const pessoas = [
     {nome: 'Maria Flor', idade: 25, renda: 8500},
     {nome: 'Joerdson Souza', idade: 75, renda:5000},
