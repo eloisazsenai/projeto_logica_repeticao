@@ -78,6 +78,29 @@ const pessoas = [
     {nome: 'João Flor', idade:32, renda:80}
 ]
 
+//MANIPULANDO ARRAY
+//ADICIONAR ELEMENTOS NO ARRAY
+pessoas.push({nome: 'Mongólia', idade:32, renda:3500})
+pessoas.unshift({nome:'Joerdison', idade:36, renda:100000})
+
+//SPLICE ADICIONA EM UMA POSIÇÃO SEM EXCLUIR UM ELEMENTO
+pessoas.splice(3,1,{nome:'Extraterrestre', idade:250, renda: 0.50})
+
+//SPLICE ADICIONA EM UMA POSIÇÃO E NESTE EXEMPLO EXCLUI MAIS DOIS ELEMENTOS A PARTIR DA POSIÇÃO(ÍNDICE) INFORMADO
+pessoas.splice(3,2,{nome:'Extraterrestre', idade: 250, renda: 0.50})
+
+//SPLICE EXCLUI UMA POSIÇÃO E NESSE EXEMPLO EXCLUI APENAS O ELEMENTO DA POSIÇÃO INFORMADA
+pessoas.splice(1,0)
+
+//SPLICE EXCLUI DOIS ELEMENTOS A PARTIR DA POSIÇÃO(ÍNDICE) INFORMADA
+pessoas.splice(2,2)
+
+//EXCLUIR O ULTIMO ELEMTNO DO ARRAY
+pessoas.pop()
+
+//CONTANDO ELEMENTOS DO ARRAY
+console.log('NUMERO DE ELEMENTOS ====>', pessoas.length)
+
 //LISTANDO OBJETO LITERAL PELO FOR
 const divListaObjFor = document.querySelector('#div-listado-for')
 
@@ -107,5 +130,5 @@ for(let elem of pessoas){
 const divListaForeach = document.querySelector('#div-lista-foreach')
 
 pessoas.forEach((elem, i)=>{
-    divListaForeach.innerHTML += `${i + 1} - ${elem.nome}, ${elem.idade}, RS${elem.renda.toFixed(2).replace('.',',')} <br>`
+    divListaForeach.innerHTML += `${i + 1} - ${elem.nome}, ${elem.idade}, RS${elem.renda.toFixed(2).replace('.',',')}<br>`
 })
